@@ -59,7 +59,7 @@ main {
 footer {
     width: 100%;
     height: 60px;
-    @include flexCenter()
+    @include flexCenter;
 }
 
 p {
