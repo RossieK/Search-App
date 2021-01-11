@@ -1,4 +1,4 @@
-main, footer {
+main, footer, .searchEntry {
   display: flex;
   align-items: center;
 }
@@ -89,5 +89,123 @@ img {
 
 .flex {
   display: flex;
+}
+
+.searchEntry {
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: 40px;
+}
+
+.searchEntry .logo {
+  letter-spacing: -5px;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .searchEntry .logo {
+    font-size: 4rem;
+    letter-spacing: -10px;
+  }
+}
+
+.searchEntry .searchBar {
+  width: 90vw;
+  display: flex;
+  border: 2px solid #e6e6e6;
+  border-radius: 500px;
+  padding: 0.15rem 0.25rem 0.15rem 0.75rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .searchEntry .searchBar {
+    width: 80vw;
+    padding: 1.25rem 1.5rem;
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  .searchEntry .searchBar {
+    width: 60vw;
+  }
+}
+
+.searchEntry .searchBar input[type="text"] {
+  flex-grow: 1;
+  font-size: 0.75rem;
+  text-align: left;
+  letter-spacing: 0.1rem;
+  border: 0;
+  outline: none;
+  min-width: 150px;
+}
+
+@media only screen and (min-width: 768px) {
+  .searchEntry .searchBar input[type="text"] {
+    font-size: 1.25rem;
+  }
+}
+
+.searchEntry .searchBar .button {
+  cursor: pointer;
+  border: 0;
+  background: transparent;
+  min-width: 48px;
+  min-height: 48px;
+  outline: none;
+}
+
+.searchEntry .searchBar .button i {
+  font-family: "Font Awesome 5 Free";
+  font-size: 1rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .searchEntry .searchBar .button i {
+    font-size: 1.5rem;
+  }
+}
+
+.searchEntry .searchBar .button:hover i,
+.searchEntry .searchBar .button:focus i {
+  padding-bottom: 0.5rem;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+}
+
+.searchEntry .searchBar .searchButton:hover i,
+.searchEntry .searchBar .searchButton:focus i {
+  color: #3cba54;
+}
+
+.searchEntry .searchBar .clear:hover i,
+.searchEntry .searchBar .clear:focus i {
+  color: #db3236;
+}
+
+@media only screen and (min-width: 768px) {
+  .searchEntry .searchBar .searchButton {
+    padding-left: 1rem;
+  }
+}
+
+.searchEntry .searchBar .clear {
+  justify-content: center;
+  align-items: center;
+  color: #70757a;
+  border-right: thin solid #d9d9d9;
+}
+
+@media only screen and (min-width: 768px) {
+  .searchEntry .searchBar .clear {
+    padding: 0 1rem;
+  }
+}
+
+.searchEntry .searchBar:hover,
+.searchEntry .searchBar:focus-within {
+  box-shadow: 0 2px 5px 2px #e6e6e6;
 }
 /*# sourceMappingURL=style.css.map */
