@@ -1,5 +1,5 @@
 import { setSearchFocus } from "./searchBar.js";
-import { buildSearchResults, clearStatsLine, setStatsLine } from "./searchResults.js";
+import { deleteSearchResults, buildSearchResults, clearStatsLine, setStatsLine } from "./searchResults.js";
 import { getSearchTerm, retrieveSearchResults } from "./dataFunctions.js";
 
 document.addEventListener("readystatechange", (event) => {
@@ -17,7 +17,7 @@ const initApp = () => {
 
 const submitTheSearch = (event) => {
     event.preventDefault();
-
+    deleteSearchResults();
     processTheSearch();
     setSearchFocus();
 }
